@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowRight, Truck, ShieldCheck, Heart, Sparkles, Star, Award, Camera } from 'lucide-react';
 import { STORE_INFO } from '../data/products';
+import { getImageUrl } from '../utils/asset';
 
 export default function Hero({ onShopNow, onExploreCategory }) {
   const [activeVisual, setActiveVisual] = useState('bride'); // 'bride' or 'editorial'
@@ -120,7 +121,7 @@ export default function Hero({ onShopNow, onExploreCategory }) {
               <div className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-tr from-pink-100 via-rose-50 to-pink-200 p-2 shadow-2xl shadow-rose-200/50 group">
                 <div className="overflow-hidden rounded-[2.2rem] bg-white relative">
                   <img
-                    src={activeVisual === 'bride' ? './images/areena-bridal-glam.jpg' : './images/hero-model.jpg'}
+                    src={activeVisual === 'bride' ? getImageUrl('images/areena-bridal-glam.jpg') : getImageUrl('images/hero-model.jpg')}
                     alt="Areena Beauty Looks Bridal Makeover"
                     className="w-full h-[470px] object-cover object-top transition-all duration-700 group-hover:scale-105"
                   />

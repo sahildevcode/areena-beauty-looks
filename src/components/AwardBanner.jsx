@@ -1,6 +1,7 @@
 import React from 'react';
 import { Award, Trophy, Star, Sparkles, CheckCircle2 } from 'lucide-react';
 import { STORE_INFO } from '../data/products';
+import { getImageUrl } from '../utils/asset';
 
 export default function AwardBanner() {
   return (
@@ -18,7 +19,7 @@ export default function AwardBanner() {
             <div className="lg:col-span-5 flex justify-center">
               <div className="relative group rounded-2xl overflow-hidden p-1 bg-gradient-to-tr from-amber-300 via-pink-400 to-amber-200 shadow-xl max-w-md w-full">
                 <img
-                  src="./images/areena-award-ceremony.jpg"
+                  src={getImageUrl('images/areena-award-ceremony.jpg')}
                   alt="Areena Beauty Looks receiving Business Conclave Excellence Award 2024 from Sneha Ullal"
                   className="w-full h-64 object-cover object-center rounded-xl transition-transform duration-500 group-hover:scale-103"
                   loading="lazy"

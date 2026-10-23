@@ -17,6 +17,7 @@ import Toast from './components/Toast';
 import FloatingSocialBar from './components/FloatingSocialBar';
 
 import { PRODUCTS, STORE_INFO } from './data/products';
+import { getImageUrl } from './utils/asset';
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -27,7 +28,7 @@ export default function App() {
       category: 'nails',
       price: 8.99,
       originalPrice: 11.25,
-      image: './images/prod-nails.jpg',
+      image: getImageUrl('images/prod-nails.jpg'),
       quantity: 1
     }
   ]);
