@@ -129,7 +129,7 @@ export default function CartDrawer({
                 </div>
                 <h3 className="text-xl font-serif font-semibold text-gray-900">Order Placed!</h3>
                 <p className="text-sm text-gray-600 max-w-xs mx-auto">
-                  Thank you! Your GlowNest beauty package is being prepared with love and care.
+                  Thank you! Your Arina beauty package is being prepared with love and care.
                 </p>
               </div>
             ) : cart.length === 0 ? (

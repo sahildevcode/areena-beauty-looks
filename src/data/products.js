@@ -145,15 +145,15 @@ export const PRODUCTS = [
 ];
 
 export const STORE_INFO = {
-  name: 'GlowNest',
-  brandShort: 'GlowNest',
+  name: 'Arina Beauty Looks',
+  brandShort: 'Arina Beauty Looks',
   tagline: 'Beauty • Style • You',
   slogan: 'Your Beauty Our Priority ♡',
   googleMapsUrl: 'https://maps.app.goo.gl/VqQCfKcrwQY2TKVL8',
   instagramUrl: 'https://www.instagram.com/llll_rakhi_llll?srtk=MTF4ZnR6azE2ODJzdA==',
   instagramHandle: '@llll_rakhi_llll',
   phone: '+91 98765 43210',
-  email: 'hello@glownest.com',
+  email: 'hello@arinabeautylooks.com',
   hours: 'Mon - Sun: 10:00 AM – 9:00 PM',
   promoCode: 'WELCOME10',
   discountText: '10% OFF Your First Order',

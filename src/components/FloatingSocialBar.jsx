@@ -27,7 +27,7 @@ export default function FloatingSocialBar() {
           onMouseEnter={() => setHovered('insta')}
           onMouseLeave={() => setHovered(null)}
           className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF] text-white flex items-center justify-center shadow-lg shadow-pink-500/30 hover:shadow-2xl hover:shadow-pink-500/50 hover:scale-110 active:scale-95 transition-all duration-300 group/btn border-2 border-white/90"
-          title="Follow GlowNest on Instagram"
+          title="Follow Arina on Instagram"
         >
           {/* SVG Instagram Icon */}
           <svg
@@ -55,7 +55,7 @@ export default function FloatingSocialBar() {
       <div className="relative flex items-center justify-end group">
         {/* Tooltip on left */}
         <div className="absolute right-full mr-3 hidden sm:flex items-center gap-1.5 bg-gray-900/90 backdrop-blur-md text-white text-xs font-semibold px-3 py-1.5 rounded-xl shadow-xl border border-white/10 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none transform translate-x-2 group-hover:translate-x-0 whitespace-nowrap">
-          <span>GlowNest on Google Maps</span>
+          <span>Arina on Google Maps</span>
           <span className="text-[10px] text-emerald-300">📍</span>
         </div>
 

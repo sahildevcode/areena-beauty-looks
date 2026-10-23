@@ -95,7 +95,7 @@ export default function Hero({ onShopNow, onExploreCategory }) {
                 <div className="overflow-hidden rounded-[2.2rem] bg-white relative">
                   <img
                     src={getImageUrl(heroMode === 'signature' ? 'images/client-glam-hero.jpg' : 'images/hero-model.jpg')}
-                    alt="GlowNest Beauty & Style"
+                    alt="Arina Beauty & Style"
                     className="w-full h-[470px] object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   />
                   {/* Subtle gradient vignette */}

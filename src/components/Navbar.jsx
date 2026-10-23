@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Search, ShoppingBag, Heart, User, Menu, X, Truck, Sparkles, MapPin } from 'lucide-react';
 import { STORE_INFO } from '../data/products';
+import { getImageUrl } from '../utils/asset';
 
 export default function Navbar({
   cartCount,
@@ -61,24 +62,27 @@ export default function Navbar({
 
       {/* Main Header matching Pinterest screenshot */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
-        {/* Brand Logo: GlowNest ♡ */}
+        {/* Brand Logo: ARINA BEAUTY LOOKS */}
         <a
           href="#home"
           onClick={(e) => {
             e.preventDefault();
             onNavigate('home');
           }}
-          className="flex flex-col items-start group select-none"
+          className="flex flex-col items-start group select-none py-1"
+          title="Arina Beauty Looks"
         >
-          <div className="flex items-center gap-1">
-            <span className="font-serif text-2xl sm:text-3xl font-semibold tracking-wider text-[#44222A] group-hover:text-[#C45B72] transition-colors">
-              GlowNest
-            </span>
-            <span className="text-[#C45B72] text-xl font-normal transition-transform group-hover:scale-125 duration-300">
+          <div className="flex items-center gap-1.5">
+            <img
+              src={getImageUrl('images/arina-logo.png')}
+              alt="ARINA BEAUTY LOOKS"
+              className="h-5 sm:h-6 md:h-7 w-auto object-contain transition-transform group-hover:scale-105 duration-300"
+            />
+            <span className="text-[#C45B72] text-base sm:text-lg font-normal transition-transform group-hover:scale-125 duration-300">
               ♡
             </span>
           </div>
-          <span className="text-[9px] uppercase tracking-[0.35em] text-[#A3334C] font-semibold -mt-1">
+          <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.32em] text-[#A3334C] font-semibold mt-0.5">
             BEAUTY • STYLE • YOU
           </span>
         </a>

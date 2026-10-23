@@ -1,4 +1,4 @@
-# GlowNest ♡ — Beauty • Style • You
+# Arina Beauty Looks ♡ — Beauty • Style • You
 
 > Aesthetic beauty essentials, press-on nails, hydrating lip glosses, viral accessories, and skincare — designed to make you feel special every day. Look Good ♡ Feel Better.
 

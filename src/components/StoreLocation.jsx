@@ -20,7 +20,7 @@ export default function StoreLocation() {
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-serif text-[#31161D]">
-            Visit GlowNest Boutique Store
+            Visit Arina Beauty Looks Boutique
           </h2>
           <p className="mt-2 text-sm text-gray-500">
             Experience our viral beauty collections, sample skincare products, try nail styles, or order online for fast doorstep delivery.
@@ -34,7 +34,7 @@ export default function StoreLocation() {
             <div className="space-y-6">
               
               <div className="border-b border-pink-100 pb-5">
-                <span className="font-script text-2xl text-[#C45B72]">GlowNest Store ♡</span>
+                <span className="font-script text-2xl text-[#C45B72]">Arina Beauty Looks ♡</span>
                 <h3 className="text-xl font-serif text-gray-900 font-semibold mt-1 flex items-center gap-2">
                   <span>Flagship Beauty &amp; Style Boutique</span>
                 </h3>
@@ -58,7 +58,7 @@ export default function StoreLocation() {
                 <div>
                   <h4 className="text-xs font-bold text-gray-800 uppercase tracking-wider">Store Location</h4>
                   <p className="text-sm text-gray-600 mt-0.5 leading-relaxed">
-                    GlowNest Beauty &amp; Lifestyle Store
+                    Arina Beauty Looks Store &amp; Studio
                   </p>
                   <p className="text-xs text-[#C45B72] font-medium mt-1">
                     Direct GPS link active on Google Maps
@@ -131,12 +131,12 @@ export default function StoreLocation() {
               </span>
             </div>
 
-            {/* Center Visual: GlowNest aesthetic boutique visual */}
+            {/* Center Visual: Arina Beauty Looks aesthetic boutique visual */}
             <div className="my-auto py-6 flex flex-col sm:flex-row items-center gap-6 justify-center">
               <div className="relative group shrink-0">
                 <img
                   src={getImageUrl('images/client-royal-look-sq.jpg')}
-                  alt="GlowNest Real Client Review"
+                  alt="Arina Beauty Looks Real Client Review"
                   className="w-28 h-28 sm:w-36 sm:h-36 object-cover object-top rounded-2xl shadow-lg border-2 border-white"
                 />
                 <div className="absolute -bottom-2 -right-2 bg-white rounded-full p-1 shadow-md">

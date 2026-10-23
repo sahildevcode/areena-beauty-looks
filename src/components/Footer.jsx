@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ArrowRight, Check, Heart, Sparkles } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { STORE_INFO } from '../data/products';
+import { getImageUrl } from '../utils/asset';
 
 export default function Footer({ onNavigate, onTriggerLoader }) {
   const [email, setEmail] = useState('');
@@ -33,15 +34,17 @@ export default function Footer({ onNavigate, onTriggerLoader }) {
           {/* Column 1: Brand Info */}
           <div className="lg:col-span-4 space-y-4">
             <div className="flex flex-col items-start select-none">
-              <div className="flex items-center gap-1">
-                <span className="font-serif text-2xl sm:text-3xl font-semibold tracking-wider text-[#44222A]">
-                  GlowNest
-                </span>
+              <div className="flex items-center gap-1.5">
+                <img
+                  src={getImageUrl('images/arina-logo.png')}
+                  alt="ARINA BEAUTY LOOKS"
+                  className="h-6 sm:h-7 w-auto object-contain"
+                />
                 <span className="text-[#C45B72] text-xl font-normal">
                   ♡
                 </span>
               </div>
-              <span className="text-[9px] uppercase tracking-[0.32em] text-[#A3334C] font-semibold -mt-1">
+              <span className="text-[9px] uppercase tracking-[0.32em] text-[#A3334C] font-semibold mt-1">
                 BEAUTY • STYLE • YOU
               </span>
             </div>
@@ -179,7 +182,7 @@ export default function Footer({ onNavigate, onTriggerLoader }) {
               </div>
               {subscribed && (
                 <p className="text-[11px] text-emerald-600 mt-1 font-medium">
-                  Welcome to GlowNest family! Code WELCOME10 is ready.
+                  Welcome to Arina Beauty Looks family! Code WELCOME10 is ready.
                 </p>
               )}
             </form>
@@ -189,10 +192,10 @@ export default function Footer({ onNavigate, onTriggerLoader }) {
 
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-500">
-          <p>© 2026 GlowNest. All rights reserved.</p>
+          <p>© 2026 Arina Beauty Looks. All rights reserved.</p>
           <div className="flex items-center gap-1.5 font-script text-lg text-[#C45B72]">
             <span>♡</span>
-            <span>GlowNest • Look Good Feel Better</span>
+            <span>Arina Beauty Looks • Look Good Feel Better</span>
           </div>
         </div>
 

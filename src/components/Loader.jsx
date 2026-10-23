@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Heart, Sparkles } from 'lucide-react';
+import { getImageUrl } from '../utils/asset';
 
 export default function Loader({ onFinish }) {
   const [progress, setProgress] = useState(0);
@@ -43,9 +44,14 @@ export default function Loader({ onFinish }) {
           <Sparkles className="w-6 h-6 text-[#E58C9D] absolute -top-1 -right-2 animate-spin" style={{ animationDuration: '4s' }} />
         </div>
 
-        <h1 className="text-3xl md:text-4xl font-serif text-[#44222A] tracking-wider mb-1 font-semibold flex items-center gap-2">
-          GlowNest <span className="text-[#C45B72] font-normal">♡</span>
-        </h1>
+        <div className="flex items-center gap-1.5 mb-2">
+          <img
+            src={getImageUrl('images/arina-logo.png')}
+            alt="ARINA BEAUTY LOOKS"
+            className="h-7 sm:h-9 w-auto object-contain"
+          />
+          <span className="text-[#C45B72] text-xl font-normal">♡</span>
+        </div>
         <p className="text-xs uppercase tracking-[0.3em] text-[#C45B72] font-medium mb-6">
           BEAUTY • STYLE • YOU
         </p>
