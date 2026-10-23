@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Heart, Sparkles, Award } from 'lucide-react';
+import { Heart, Sparkles } from 'lucide-react';
 
 export default function Loader({ onFinish }) {
   const [progress, setProgress] = useState(0);
@@ -44,10 +44,10 @@ export default function Loader({ onFinish }) {
         </div>
 
         <h1 className="text-3xl md:text-4xl font-serif text-[#44222A] tracking-wider mb-1 font-semibold flex items-center gap-2">
-          Areena Beauty Looks <span className="text-[#C45B72] font-normal">♡</span>
+          GlowNest <span className="text-[#C45B72] font-normal">♡</span>
         </h1>
         <p className="text-xs uppercase tracking-[0.3em] text-[#C45B72] font-medium mb-6">
-          BRIDAL MAKEOVER STUDIO &amp; SALON
+          BEAUTY • STYLE • YOU
         </p>
 
         {/* Progress bar */}
@@ -59,7 +59,7 @@ export default function Loader({ onFinish }) {
         </div>
 
         <div className="flex items-center justify-between w-64 mt-2.5 text-xs text-rose-800/70 font-medium">
-          <span className="font-script text-base text-[#C45B72]">Preparing your bridal glow...</span>
+          <span className="font-script text-base text-[#C45B72]">Preparing your glow...</span>
           <span className="font-mono">{progress}%</span>
         </div>
       </div>

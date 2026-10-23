@@ -3,81 +3,51 @@ import { getImageUrl } from '../utils/asset';
 export const CATEGORIES = [
   {
     id: 'makeup',
-    name: 'Makeup & Bridal',
-    image: getImageUrl('images/areena-bridal-glam-sq-hd.jpg?v=2'),
-    count: '24+ Looks',
+    name: 'Makeup',
+    image: getImageUrl('images/cat-makeup-hd.jpg?v=3'),
+    count: '24+ Items',
     tagline: 'Glow from within',
-    description: 'Signature HD bridal glam, reception looks, and luxury palettes.'
+    description: 'Luxury brushes, creamy palettes, and luminous essentials.'
   },
   {
     id: 'skincare',
     name: 'Skincare',
-    image: getImageUrl('images/cat-skincare-hd.jpg?v=2'),
-    count: '18+ Treatments',
+    image: getImageUrl('images/cat-skincare-hd.jpg?v=3'),
+    count: '18+ Items',
     tagline: 'Dewy & Pure',
-    description: 'Pre-bridal facials, hydrating serums, and radiant glass skin.'
+    description: 'Gentle cleansers, hydrating serums, and radiant moisturizers.'
   },
   {
     id: 'nails',
-    name: 'Nails & Extensions',
-    image: getImageUrl('images/cat-nails-hd.jpg?v=2'),
-    count: '32+ Styles',
+    name: 'Nails',
+    image: getImageUrl('images/cat-nails-hd.jpg?v=3'),
+    count: '32+ Items',
     tagline: 'Salon finish at home',
-    description: 'Aesthetic press-on nail sets, bows, gems, and acrylic extensions.'
+    description: 'Aesthetic press-on nail sets, bows, gems, and gel tips.'
   },
   {
     id: 'hair',
-    name: 'Hair Styling & Accessories',
-    image: getImageUrl('images/cat-hair-hd.jpg?v=2'),
-    count: '28+ Styles',
+    name: 'Hair Accessories',
+    image: getImageUrl('images/cat-hair-hd.jpg?v=3'),
+    count: '28+ Items',
     tagline: 'Effortlessly chic',
-    description: 'Bridal floral buns, Korean style clips, and textured curls.'
+    description: 'Korean style pastel claw clips, satin scrunchies, and bows.'
   },
   {
     id: 'jewelry',
-    name: 'Bridal Jewelry',
-    image: getImageUrl('images/areena-royal-bridal-sq-hd.jpg?v=2'),
-    count: '19+ Sets',
-    tagline: 'Royal heritage',
-    description: 'Kundan naths, royal chokers, maang tikka, and pearl haars.'
+    name: 'Jewelry',
+    image: getImageUrl('images/cat-jewelry-hd.jpg?v=3'),
+    count: '19+ Items',
+    tagline: 'Timeless sparkle',
+    description: 'Dainty gold chokers, pearl drop earrings, and charms.'
   },
   {
     id: 'accessories',
-    name: 'Beauty Essentials',
-    image: getImageUrl('images/cat-accessories-hd.jpg?v=2'),
+    name: 'Accessories',
+    image: getImageUrl('images/cat-accessories-hd.jpg?v=3'),
     count: '15+ Items',
     tagline: 'Everyday must-haves',
-    description: 'Ultra-soft blending sponges, cosmetic pouches, and vanity kits.'
-  }
-];
-
-export const BRIDAL_PORTFOLIO = [
-  {
-    id: 'look-1',
-    title: 'Signature HD Bridal Glam',
-    subtitle: 'Nath, Maang Tikka & Glass Skin Glow',
-    image: getImageUrl('images/areena-bridal-glam-hd.jpg?v=2'),
-    category: 'Bridal Makeover',
-    tag: 'Most Requested',
-    features: ['Waterproof 24-hr Airbrush finish', 'Precision Winged Eyeliner', 'Soft Rose Blush & Hydrated Lips', 'Floral Hair Adornment']
-  },
-  {
-    id: 'look-2',
-    title: 'Royal Heritage Velvet Bridal',
-    subtitle: 'Classic Maroon & Gold Embroidery',
-    image: getImageUrl('images/areena-royal-bridal-hd.jpg?v=2'),
-    category: 'Traditional Bridal',
-    tag: 'Heritage Luxe',
-    features: ['Royal Matha Patti & Double Dupatta Draping', 'Heavy Kundan & Pearl Haar Setting', 'Smokey Kohl Eye Definition', 'Long-lasting Flawless Base']
-  },
-  {
-    id: 'look-3',
-    title: 'Champagne Gold Reception Glam',
-    subtitle: 'Sparkling Cocktail & Sangeet Look',
-    image: getImageUrl('images/areena-reception-gold-hd.jpg?v=2'),
-    category: 'Reception & Party',
-    tag: 'Trending 2026',
-    features: ['Dewy Luminous Shimmer Base', 'Layered Diamond-style Choker Matching', 'Soft Glam Beach Waves / Sleek Hair', 'Feather & Tassel Outfit Complement']
+    description: 'Ultra-soft blending sponges, cosmetic pouches, and mirrors.'
   }
 ];
 
@@ -89,7 +59,7 @@ export const PRODUCTS = [
     price: 499,
     originalPrice: 799,
     discount: '-38%',
-    image: getImageUrl('images/prod-nails-hd.jpg?v=2'),
+    image: getImageUrl('images/prod-nails-hd.jpg?v=3'),
     rating: 4.9,
     reviews: 142,
     badge: 'Best Seller',
@@ -104,7 +74,7 @@ export const PRODUCTS = [
     price: 349,
     originalPrice: 599,
     discount: '-42%',
-    image: getImageUrl('images/prod-clips-hd.jpg?v=2'),
+    image: getImageUrl('images/prod-clips-hd.jpg?v=3'),
     rating: 4.8,
     reviews: 98,
     badge: 'Trending',
@@ -119,7 +89,7 @@ export const PRODUCTS = [
     price: 899,
     originalPrice: 1299,
     discount: '-30%',
-    image: getImageUrl('images/prod-gloss-hd.jpg?v=2'),
+    image: getImageUrl('images/prod-gloss-hd.jpg?v=3'),
     rating: 5.0,
     reviews: 230,
     badge: 'Popular',
@@ -134,7 +104,7 @@ export const PRODUCTS = [
     price: 299,
     originalPrice: 499,
     discount: '-40%',
-    image: getImageUrl('images/prod-sponge-hd.jpg?v=2'),
+    image: getImageUrl('images/prod-sponge-hd.jpg?v=3'),
     rating: 4.9,
     reviews: 84,
     badge: 'Essential',
@@ -149,7 +119,7 @@ export const PRODUCTS = [
     price: 999,
     originalPrice: 1499,
     discount: '-33%',
-    image: getImageUrl('images/cat-skincare-hd.jpg?v=2'),
+    image: getImageUrl('images/cat-skincare-hd.jpg?v=3'),
     rating: 4.9,
     reviews: 67,
     badge: 'New',
@@ -164,7 +134,7 @@ export const PRODUCTS = [
     price: 699,
     originalPrice: 999,
     discount: '-30%',
-    image: getImageUrl('images/cat-jewelry-hd.jpg?v=2'),
+    image: getImageUrl('images/cat-jewelry-hd.jpg?v=3'),
     rating: 4.8,
     reviews: 115,
     badge: 'Hot',
@@ -175,19 +145,18 @@ export const PRODUCTS = [
 ];
 
 export const STORE_INFO = {
-  name: 'Areena Beauty Looks',
-  brandShort: 'Areena',
-  tagline: 'Bridal Makeover Studio & Salon',
+  name: 'GlowNest',
+  brandShort: 'GlowNest',
+  tagline: 'Beauty • Style • You',
   slogan: 'Your Beauty Our Priority ♡',
   googleMapsUrl: 'https://maps.app.goo.gl/VqQCfKcrwQY2TKVL8',
   instagramUrl: 'https://www.instagram.com/llll_rakhi_llll?srtk=MTF4ZnR6azE2ODJzdA==',
   instagramHandle: '@llll_rakhi_llll',
   phone: '+91 98765 43210',
-  email: 'contact@areenabeautylooks.com',
+  email: 'hello@glownest.com',
   hours: 'Mon - Sun: 10:00 AM – 9:00 PM',
-  award: 'Excellence in Bridal Makeover & Beauty Innovation 2024 (Felicitated by Sneha Ullal)',
   promoCode: 'WELCOME10',
-  discountText: '10% OFF Your First Service / Order',
+  discountText: '10% OFF Your First Order',
   freeShippingThreshold: 999,
   currency: '₹'
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Clock, Phone, Mail, ExternalLink, Navigation, Sparkles, Star, Award, Heart } from 'lucide-react';
+import { MapPin, Clock, Phone, Mail, ExternalLink, Navigation, Sparkles, Star, Heart, CheckCircle2 } from 'lucide-react';
 import { STORE_INFO } from '../data/products';
 import { getImageUrl } from '../utils/asset';
 
@@ -16,14 +16,14 @@ export default function StoreLocation() {
           <div className="inline-flex items-center gap-1.5 mb-2 bg-pink-50 border border-pink-200/60 px-3 py-1 rounded-full">
             <MapPin className="w-4 h-4 text-[#C45B72]" />
             <span className="text-xs uppercase tracking-widest text-[#C45B72] font-semibold">
-              Find Us On Google Maps
+              Visit Us in Person
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-serif text-[#31161D]">
-            Visit Areena Beauty Looks Studio
+            Visit GlowNest Boutique Store
           </h2>
           <p className="mt-2 text-sm text-gray-500">
-            Visit our award-winning bridal studio &amp; salon for personalized consultations, bridal trials, and luxury beauty treatments.
+            Experience our viral beauty collections, sample skincare products, try nail styles, or order online for fast doorstep delivery.
           </p>
         </div>
 
@@ -34,10 +34,9 @@ export default function StoreLocation() {
             <div className="space-y-6">
               
               <div className="border-b border-pink-100 pb-5">
-                <span className="font-script text-2xl text-[#C45B72]">Areena Beauty Looks ♡</span>
+                <span className="font-script text-2xl text-[#C45B72]">GlowNest Store ♡</span>
                 <h3 className="text-xl font-serif text-gray-900 font-semibold mt-1 flex items-center gap-2">
-                  <span>Bridal Studio &amp; Salon</span>
-                  <Award className="w-5 h-5 text-amber-500" />
+                  <span>Flagship Beauty &amp; Style Boutique</span>
                 </h3>
                 <div className="flex items-center gap-2 mt-2">
                   <div className="flex text-amber-400">
@@ -57,9 +56,9 @@ export default function StoreLocation() {
                   <MapPin className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold text-gray-800 uppercase tracking-wider">Studio Location</h4>
+                  <h4 className="text-xs font-bold text-gray-800 uppercase tracking-wider">Store Location</h4>
                   <p className="text-sm text-gray-600 mt-0.5 leading-relaxed">
-                    Areena Beauty Looks Studio &amp; Salon
+                    GlowNest Beauty &amp; Lifestyle Store
                   </p>
                   <p className="text-xs text-[#C45B72] font-medium mt-1">
                     Direct GPS link active on Google Maps
@@ -73,28 +72,28 @@ export default function StoreLocation() {
                   <Clock className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold text-gray-800 uppercase tracking-wider">Studio Timings</h4>
+                  <h4 className="text-xs font-bold text-gray-800 uppercase tracking-wider">Store Hours</h4>
                   <p className="text-sm text-gray-600 mt-0.5">Monday – Sunday: 10:00 AM – 9:00 PM</p>
-                  <p className="text-xs text-emerald-600 font-medium">Bridal Bookings Open 24/7</p>
+                  <p className="text-xs text-emerald-600 font-medium">Online Orders Dispatched Same Day</p>
                 </div>
               </div>
 
-              {/* Services Offered */}
+              {/* Highlights */}
               <div className="pt-2 border-t border-pink-100">
                 <h4 className="text-xs font-bold text-gray-800 uppercase tracking-wider mb-2">
-                  Specialized Services
+                  Store Features &amp; Perks
                 </h4>
                 <div className="flex flex-wrap gap-1.5">
                   {[
-                    'HD Bridal Makeover',
-                    'Reception & Engagement Glam',
-                    'Airbrush Makeup',
-                    'Nail Extensions & Bow Art',
-                    'Bridal Hair Styling',
-                    'Pre-Bridal Glow Facials'
-                  ].map((srv, idx) => (
+                    'Aesthetic Press-On Nail Bar',
+                    'Lip Gloss Swatch Counter',
+                    'Curated Korean Hair Clips',
+                    'Dainty Gold Jewelry Display',
+                    'Instant In-Store Pickup',
+                    'Free Cute Gift Wrapping'
+                  ].map((feat, idx) => (
                     <span key={idx} className="text-[11px] bg-white border border-pink-200 text-gray-700 px-2.5 py-1 rounded-lg">
-                      ✦ {srv}
+                      ✦ {feat}
                     </span>
                   ))}
                 </div>
@@ -111,34 +110,34 @@ export default function StoreLocation() {
                 className="w-full inline-flex items-center justify-center gap-2 bg-[#C45B72] hover:bg-[#A3334C] text-white py-3.5 px-6 rounded-2xl font-semibold text-sm transition-all duration-300 shadow-md shadow-pink-200/50 hover:shadow-lg active:scale-98 group"
               >
                 <Navigation className="w-4 h-4 transition-transform group-hover:rotate-45" />
-                <span>Open Areena Beauty Looks in Google Maps</span>
+                <span>Open in Google Maps Navigation</span>
                 <ExternalLink className="w-3.5 h-3.5 opacity-80" />
               </a>
             </div>
           </div>
 
-          {/* Right Visual Card Featuring Studio Real Makeover */}
+          {/* Right Visual Card */}
           <div className="lg:col-span-7 relative rounded-3xl overflow-hidden border border-pink-100 bg-[#FFF5F7] min-h-[380px] flex flex-col justify-between p-6 sm:p-8 shadow-sm">
             
             {/* Top info badge */}
             <div className="flex items-center justify-between">
               <div className="bg-white/95 backdrop-blur-sm px-4 py-1.5 rounded-full border border-pink-100 flex items-center gap-2 text-xs font-medium text-gray-800 shadow-sm">
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping" />
-                <span>Verified Google Business Studio</span>
+                <span>Verified Google Location</span>
               </div>
 
               <span className="font-script text-xl text-[#C45B72]">
-                Book Your Trial ♡
+                Come Say Hi ♡
               </span>
             </div>
 
-            {/* Center Visual: Real bridal makeover photo crop */}
+            {/* Center Visual: GlowNest aesthetic boutique visual */}
             <div className="my-auto py-6 flex flex-col sm:flex-row items-center gap-6 justify-center">
               <div className="relative group shrink-0">
                 <img
-                  src={getImageUrl('images/areena-royal-bridal-sq.jpg')}
-                  alt="Areena Bridal Real Transformation"
-                  className="w-28 h-28 sm:w-36 sm:h-36 object-cover rounded-2xl shadow-lg border-2 border-white"
+                  src={getImageUrl('images/hero-model.jpg')}
+                  alt="GlowNest Store Experience"
+                  className="w-28 h-28 sm:w-36 sm:h-36 object-cover object-top rounded-2xl shadow-lg border-2 border-white"
                 />
                 <div className="absolute -bottom-2 -right-2 bg-white rounded-full p-1 shadow-md">
                   <Heart className="w-4 h-4 text-[#C45B72] fill-[#C45B72]" />
@@ -147,16 +146,17 @@ export default function StoreLocation() {
 
               <div className="text-center sm:text-left space-y-1">
                 <span className="text-[11px] font-bold text-[#C45B72] uppercase tracking-wider">
-                  Real Client Reviews on Maps
+                  Verified Google Customer Rating
                 </span>
                 <h4 className="text-xl font-serif font-bold text-gray-900">
-                  "Best bridal makeover experience!"
+                  "Most aesthetic beauty store!"
                 </h4>
                 <p className="text-xs text-gray-600 max-w-sm leading-relaxed">
-                  "Every detail from jewelry setting to hair flowers was done with sheer perfection. Received endless compliments!"
+                  "The quality of the press-on nails and lip glosses is unmatched. Packaging was super cute and delivery was so fast!"
                 </p>
                 <div className="pt-2 flex items-center gap-2 justify-center sm:justify-start text-xs text-gray-500">
-                  <span>✦ Verified Google Maps Bride</span>
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
+                  <span>5.0 ★ Top Rated on Google Maps</span>
                 </div>
               </div>
             </div>

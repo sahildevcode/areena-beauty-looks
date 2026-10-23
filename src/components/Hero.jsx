@@ -1,11 +1,8 @@
-import React, { useState } from 'react';
-import { ArrowRight, Truck, ShieldCheck, Heart, Sparkles, Star, Award, Camera } from 'lucide-react';
-import { STORE_INFO } from '../data/products';
+import React from 'react';
+import { ArrowRight, Truck, ShieldCheck, Heart, Sparkles, Star } from 'lucide-react';
 import { getImageUrl } from '../utils/asset';
 
 export default function Hero({ onShopNow, onExploreCategory }) {
-  const [activeVisual, setActiveVisual] = useState('bride'); // 'bride' or 'editorial'
-
   return (
     <section id="home" className="relative overflow-hidden pt-6 pb-14 md:py-16 bg-[#FFF9FA]">
       {/* Background soft glowing blur spheres */}
@@ -15,46 +12,46 @@ export default function Hero({ onShopNow, onExploreCategory }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-6 items-center">
           
-          {/* Left Column: Copy & CTAs */}
+          {/* Left Column: Exact Pinterest Copy & CTAs */}
           <div className="lg:col-span-7 space-y-6 text-left">
             {/* Handwritten cursive kicker */}
             <div className="inline-flex items-center gap-2">
               <span className="font-script text-2xl md:text-3xl text-[#C45B72] tracking-wide transform -rotate-2">
-                Areena Beauty Looks ♡
+                Look Good ♡ Feel Better
               </span>
             </div>
 
-            {/* Serif Luxury Heading */}
+            {/* Serif Luxury Heading from Pinterest Image */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-normal text-[#2A171C] leading-[1.15] tracking-tight">
-              Award-Winning Bridal, <br />
-              <span className="italic font-normal text-[#C45B72]">Beauty &amp; Style</span> — All in One Place
+              Beauty, Style &amp; <br />
+              <span className="italic font-normal text-[#C45B72]">More</span> — All in One Place
             </h1>
 
             {/* Subtitle */}
             <p className="text-gray-600 text-base sm:text-lg max-w-xl font-light leading-relaxed">
-              From signature celebrity bridal makeovers to trending nail art and luxury beauty accessories — designed to make you shine on your most unforgettable days.
+              Discover the latest beauty essentials, trendy accessories, and more — designed to make you feel special every day.
             </p>
 
-            {/* CTA Buttons */}
+            {/* CTA Button */}
             <div className="pt-2 flex flex-wrap items-center gap-4">
               <button
                 onClick={onShopNow}
                 className="group relative inline-flex items-center gap-3 bg-[#C45B72] hover:bg-[#A3334C] text-white px-8 py-3.5 rounded-full font-medium shadow-md shadow-pink-300/40 hover:shadow-lg hover:shadow-pink-300/60 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0"
               >
-                <span>Shop Beauty Picks</span>
+                <span>Shop Now</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </button>
 
-              <a
-                href="#bridal-portfolio"
+              <button
+                onClick={() => onExploreCategory('makeup')}
                 className="inline-flex items-center gap-2 border border-pink-200 text-[#733544] hover:bg-pink-50/80 px-6 py-3.5 rounded-full font-medium text-sm transition-all shadow-sm"
               >
                 <Sparkles className="w-4 h-4 text-[#C45B72]" />
-                <span>View Bridal Portfolio</span>
-              </a>
+                <span>Explore Catalog</span>
+              </button>
             </div>
 
-            {/* Trust Badges matching image */}
+            {/* Trust Badges matching Pinterest image */}
             <div className="pt-8 border-t border-pink-100/80 grid grid-cols-3 gap-3 sm:gap-6 text-xs text-gray-700">
               <div className="flex items-center gap-2.5">
                 <div className="w-8 h-8 rounded-full bg-pink-100/70 flex items-center justify-center shrink-0 text-[#C45B72]">
@@ -68,11 +65,11 @@ export default function Hero({ onShopNow, onExploreCategory }) {
 
               <div className="flex items-center gap-2.5">
                 <div className="w-8 h-8 rounded-full bg-pink-100/70 flex items-center justify-center shrink-0 text-[#C45B72]">
-                  <Award className="w-4 h-4" />
+                  <ShieldCheck className="w-4 h-4" />
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-800 text-[11px] sm:text-xs">Award Winner</p>
-                  <p className="text-[10px] sm:text-[11px] text-gray-500">Excellence 2024</p>
+                  <p className="font-semibold text-gray-800 text-[11px] sm:text-xs">Secure</p>
+                  <p className="text-[10px] sm:text-[11px] text-gray-500">Payments</p>
                 </div>
               </div>
 
@@ -82,55 +79,30 @@ export default function Hero({ onShopNow, onExploreCategory }) {
                 </div>
                 <div>
                   <p className="font-semibold text-gray-800 text-[11px] sm:text-xs">Happy</p>
-                  <p className="text-[10px] sm:text-[11px] text-gray-500">Brides &amp; Clients</p>
+                  <p className="text-[10px] sm:text-[11px] text-gray-500">Customers</p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Hero Visual from image + real bridal model */}
-          <div className="lg:col-span-5 relative flex flex-col items-center lg:items-end">
-            
-            {/* View Switcher Tabs */}
-            <div className="mb-3 inline-flex bg-white/90 backdrop-blur-md p-1 rounded-full border border-pink-200/80 shadow-sm text-xs font-medium z-20">
-              <button
-                onClick={() => setActiveVisual('bride')}
-                className={`px-3.5 py-1.5 rounded-full transition-all duration-300 flex items-center gap-1.5 ${
-                  activeVisual === 'bride'
-                    ? 'bg-[#C45B72] text-white shadow-sm'
-                    : 'text-gray-600 hover:text-[#C45B72]'
-                }`}
-              >
-                <span>👑 Signature Bride</span>
-              </button>
-              <button
-                onClick={() => setActiveVisual('editorial')}
-                className={`px-3.5 py-1.5 rounded-full transition-all duration-300 flex items-center gap-1.5 ${
-                  activeVisual === 'editorial'
-                    ? 'bg-[#C45B72] text-white shadow-sm'
-                    : 'text-gray-600 hover:text-[#C45B72]'
-                }`}
-              >
-                <span>🌸 Editorial Glow</span>
-              </button>
-            </div>
-
+          {/* Right Column: Hero Visual from Pinterest Image */}
+          <div className="lg:col-span-5 relative flex justify-center lg:justify-end">
             <div className="relative w-full max-w-[430px]">
               
-              {/* Aesthetic Image Container */}
+              {/* Aesthetic Model Image Container */}
               <div className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-tr from-pink-100 via-rose-50 to-pink-200 p-2 shadow-2xl shadow-rose-200/50 group">
                 <div className="overflow-hidden rounded-[2.2rem] bg-white relative">
                   <img
-                    src={activeVisual === 'bride' ? getImageUrl('images/areena-bridal-glam.jpg') : getImageUrl('images/hero-model.jpg')}
-                    alt="Areena Beauty Looks Bridal Makeover"
-                    className="w-full h-[470px] object-cover object-top transition-all duration-700 group-hover:scale-105"
+                    src={getImageUrl('images/hero-model.jpg')}
+                    alt="GlowNest Beauty & Style"
+                    className="w-full h-[470px] object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   />
                   {/* Subtle gradient vignette */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-pink-900/25 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-pink-900/20 via-transparent to-transparent pointer-events-none" />
                 </div>
               </div>
 
-              {/* Floating aesthetic handwritten note from screenshot */}
+              {/* Floating aesthetic handwritten note from Pinterest screenshot */}
               <div className="absolute -top-3 -right-3 md:-right-5 bg-white/95 backdrop-blur-md py-2.5 px-4 rounded-2xl shadow-lg border border-pink-100 transform rotate-3 animate-float select-none">
                 <p className="font-script text-xl md:text-2xl text-[#C45B72] font-semibold leading-none">
                   Your Beauty <br /> Our Priority ♡
@@ -154,7 +126,7 @@ export default function Hero({ onShopNow, onExploreCategory }) {
                     ))}
                     <span className="text-xs font-bold text-gray-800 ml-1">4.9/5</span>
                   </div>
-                  <p className="text-[11px] text-gray-500 font-medium">Areena Verified Studio</p>
+                  <p className="text-[11px] text-gray-500 font-medium">1,200+ Happy Glow Reviews</p>
                 </div>
               </div>
 

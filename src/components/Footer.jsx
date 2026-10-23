@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowRight, Check, Heart, Sparkles, Award } from 'lucide-react';
+import { ArrowRight, Check, Heart, Sparkles } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { STORE_INFO } from '../data/products';
 
@@ -35,22 +35,22 @@ export default function Footer({ onNavigate, onTriggerLoader }) {
             <div className="flex flex-col items-start select-none">
               <div className="flex items-center gap-1">
                 <span className="font-serif text-2xl sm:text-3xl font-semibold tracking-wider text-[#44222A]">
-                  Areena
+                  GlowNest
                 </span>
                 <span className="text-[#C45B72] text-xl font-normal">
                   ♡
                 </span>
               </div>
               <span className="text-[9px] uppercase tracking-[0.32em] text-[#A3334C] font-semibold -mt-1">
-                BEAUTY LOOKS • BRIDAL STUDIO
+                BEAUTY • STYLE • YOU
               </span>
             </div>
 
             <p className="text-xs text-gray-600 leading-relaxed max-w-sm">
-              Award-winning bridal makeover studio, trendsetting salon treatments, and viral beauty essentials. Winner of Business Conclave Excellence Awards 2024.
+              Your one-stop destination for aesthetic press-on nails, hydrating lip glosses, viral accessories, and skincare essentials. Look Good, Feel Better!
             </p>
 
-            {/* Social Links matching user requests */}
+            {/* Social Links */}
             <div className="flex flex-wrap items-center gap-2.5 pt-2">
               <a
                 href={STORE_INFO.instagramUrl}
@@ -70,12 +70,12 @@ export default function Footer({ onNavigate, onTriggerLoader }) {
                 className="px-3.5 py-1.5 rounded-full bg-white border border-pink-200 text-gray-700 flex items-center gap-1.5 hover:bg-pink-100 hover:scale-105 transition-all text-xs font-semibold shadow-sm"
                 title="Google Maps Location"
               >
-                <span>📍 Google Maps Reviews</span>
+                <span>📍 Google Maps Directions</span>
                 <span>↗</span>
               </a>
             </div>
 
-            {/* Test Loader Button */}
+            {/* Replay Loader Button */}
             <div className="pt-2">
               <button
                 onClick={onTriggerLoader}
@@ -99,23 +99,23 @@ export default function Footer({ onNavigate, onTriggerLoader }) {
                 </a>
               </li>
               <li>
-                <a href="#bridal-portfolio" onClick={(e) => { e.preventDefault(); onNavigate('bridal-portfolio'); }} className="hover:text-[#C45B72] transition-colors font-medium text-[#C45B72]">
-                  Bridal Portfolio
-                </a>
-              </li>
-              <li>
                 <a href="#shop" onClick={(e) => { e.preventDefault(); onNavigate('shop'); }} className="hover:text-[#C45B72] transition-colors">
-                  Shop Best Sellers
+                  Popular Best Sellers
                 </a>
               </li>
               <li>
                 <a href="#categories" onClick={(e) => { e.preventDefault(); onNavigate('categories'); }} className="hover:text-[#C45B72] transition-colors">
-                  Categories
+                  Shop Categories
                 </a>
               </li>
               <li>
                 <a href="#location" onClick={(e) => { e.preventDefault(); onNavigate('location'); }} className="hover:text-[#C45B72] transition-colors">
-                  Studio Location
+                  Boutique Store &amp; Maps
+                </a>
+              </li>
+              <li>
+                <a href="#reviews" onClick={(e) => { e.preventDefault(); onNavigate('reviews'); }} className="hover:text-[#C45B72] transition-colors">
+                  Customer Reviews
                 </a>
               </li>
             </ul>
@@ -124,7 +124,7 @@ export default function Footer({ onNavigate, onTriggerLoader }) {
           {/* Column 3: Customer Care & Services */}
           <div className="lg:col-span-3 space-y-3">
             <h4 className="text-xs font-bold uppercase tracking-wider text-gray-900">
-              Direct Socials
+              Direct Connect
             </h4>
             <ul className="space-y-2 text-xs text-gray-600">
               <li>
@@ -138,14 +138,10 @@ export default function Footer({ onNavigate, onTriggerLoader }) {
                 </a>
               </li>
               <li>
-                <a href="#shipping" onClick={(e) => e.preventDefault()} className="hover:text-[#C45B72] transition-colors">
-                  Bridal Consultation Timings
-                </a>
+                <span className="text-gray-600">Free Express Delivery on Orders &gt; ₹999</span>
               </li>
               <li>
-                <a href="#returns" onClick={(e) => e.preventDefault()} className="hover:text-[#C45B72] transition-colors">
-                  30-Day Easy Returns
-                </a>
+                <span className="text-gray-600">7-Day Easy Replacement Guarantee</span>
               </li>
             </ul>
           </div>
@@ -156,7 +152,7 @@ export default function Footer({ onNavigate, onTriggerLoader }) {
               Stay in Touch
             </h4>
             <p className="text-xs text-gray-600">
-              Get exclusive bridal discount alerts, beauty tips, and special offers!
+              Get exclusive promo drops, secret discounts, and beauty tips directly to your inbox!
             </p>
 
             <form onSubmit={handleSubscribe} className="pt-1">
@@ -183,7 +179,7 @@ export default function Footer({ onNavigate, onTriggerLoader }) {
               </div>
               {subscribed && (
                 <p className="text-[11px] text-emerald-600 mt-1 font-medium">
-                  Welcome to Areena Beauty Looks family! Code WELCOME10 is ready.
+                  Welcome to GlowNest family! Code WELCOME10 is ready.
                 </p>
               )}
             </form>
@@ -193,10 +189,10 @@ export default function Footer({ onNavigate, onTriggerLoader }) {
 
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-500">
-          <p>© 2026 Areena Beauty Looks. All rights reserved.</p>
+          <p>© 2026 GlowNest. All rights reserved.</p>
           <div className="flex items-center gap-1.5 font-script text-lg text-[#C45B72]">
             <span>♡</span>
-            <span>Areena Beauty Looks • Look Good Feel Better</span>
+            <span>GlowNest • Look Good Feel Better</span>
           </div>
         </div>
 

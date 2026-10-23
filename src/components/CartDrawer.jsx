@@ -129,7 +129,7 @@ export default function CartDrawer({
                 </div>
                 <h3 className="text-xl font-serif font-semibold text-gray-900">Order Placed!</h3>
                 <p className="text-sm text-gray-600 max-w-xs mx-auto">
-                  Thank you! Your Areena beauty package is being prepared with love and care.
+                  Thank you! Your GlowNest beauty package is being prepared with love and care.
                 </p>
               </div>
             ) : cart.length === 0 ? (
@@ -139,7 +139,7 @@ export default function CartDrawer({
                 </div>
                 <h3 className="text-lg font-serif font-semibold text-gray-800">Your bag is empty</h3>
                 <p className="text-xs text-gray-500 max-w-xs mx-auto">
-                  Explore our viral nails, hair accessories, and luxury bridal essentials!
+                  Explore our viral nails, lip gloss, hair clips, and lifestyle essentials!
                 </p>
                 <button
                   onClick={onClose}

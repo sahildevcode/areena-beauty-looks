@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, ShoppingBag, Heart, User, Menu, X, Truck, Sparkles, MapPin, Camera } from 'lucide-react';
+import { Search, ShoppingBag, Heart, User, Menu, X, Truck, Sparkles, MapPin } from 'lucide-react';
 import { STORE_INFO } from '../data/products';
 
 export default function Navbar({
@@ -15,12 +15,12 @@ export default function Navbar({
 
   return (
     <header className="w-full sticky top-0 z-40 bg-white/95 backdrop-blur-md transition-all shadow-[0_2px_15px_rgba(244,112,146,0.06)] border-b border-pink-100">
-      {/* Top Notice Bar */}
+      {/* Top Notice Bar matching Pinterest screenshot */}
       <div className="bg-[#E58C9D] text-white text-xs py-2 px-4">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1.5 text-center">
           <div className="hidden md:flex items-center gap-1.5 font-medium tracking-wide">
             <Truck className="w-3.5 h-3.5" />
-            <span>Free Express Delivery on Orders Over ₹999 • All Over India</span>
+            <span>Free Express Delivery on Orders Over ₹999</span>
           </div>
 
           <div
@@ -30,20 +30,19 @@ export default function Navbar({
           >
             <Sparkles className="w-3.5 h-3.5 text-pink-100 group-hover:rotate-12 transition-transform" />
             <span>
-              ✦ 10% OFF First Booking / Order | Code:{' '}
+              ✦ 10% OFF Your First Order | Use Code:{' '}
               <span className="font-semibold underline decoration-white/60 tracking-wider">WELCOME10</span>
             </span>
           </div>
 
           <div className="hidden sm:flex items-center gap-3 text-xs tracking-wider font-light">
-            <span>Connect:</span>
-            <div className="flex items-center gap-3">
+            <span>Follow Us:</span>
+            <div className="flex items-center gap-3 font-semibold">
               <a
                 href={STORE_INFO.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:scale-110 transition-transform font-bold underline decoration-white/50"
-                title="Follow @llll_rakhi_llll on Instagram"
+                className="hover:scale-110 transition-transform underline decoration-white/50"
               >
                 Instagram ↗
               </a>
@@ -51,8 +50,7 @@ export default function Navbar({
                 href={STORE_INFO.googleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:scale-110 transition-transform font-bold underline decoration-white/50"
-                title="View on Google Maps"
+                className="hover:scale-110 transition-transform underline decoration-white/50"
               >
                 Maps ↗
               </a>
@@ -61,9 +59,9 @@ export default function Navbar({
         </div>
       </div>
 
-      {/* Main Header */}
+      {/* Main Header matching Pinterest screenshot */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
-        {/* Brand Logo */}
+        {/* Brand Logo: GlowNest ♡ */}
         <a
           href="#home"
           onClick={(e) => {
@@ -74,19 +72,19 @@ export default function Navbar({
         >
           <div className="flex items-center gap-1">
             <span className="font-serif text-2xl sm:text-3xl font-semibold tracking-wider text-[#44222A] group-hover:text-[#C45B72] transition-colors">
-              Areena
+              GlowNest
             </span>
             <span className="text-[#C45B72] text-xl font-normal transition-transform group-hover:scale-125 duration-300">
               ♡
             </span>
           </div>
-          <span className="text-[9px] uppercase tracking-[0.32em] text-[#A3334C] font-semibold -mt-1">
-            BEAUTY LOOKS • STUDIO
+          <span className="text-[9px] uppercase tracking-[0.35em] text-[#A3334C] font-semibold -mt-1">
+            BEAUTY • STYLE • YOU
           </span>
         </a>
 
-        {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center space-x-7 text-sm font-medium text-gray-700">
+        {/* Desktop Navigation Links matching Pinterest screenshot */}
+        <nav className="hidden lg:flex items-center space-x-8 text-sm font-medium text-gray-700">
           <a
             href="#home"
             onClick={(e) => { e.preventDefault(); onNavigate('home'); }}
@@ -94,41 +92,35 @@ export default function Navbar({
           >
             Home
           </a>
-          
-          <a
-            href="#bridal-portfolio"
-            onClick={(e) => { e.preventDefault(); onNavigate('bridal-portfolio'); }}
-            className="hover:text-[#C45B72] transition-colors py-1 flex items-center gap-1 text-[#C45B72] font-semibold"
-          >
-            <Camera className="w-3.5 h-3.5" />
-            <span>Bridal Portfolio</span>
-          </a>
-
-          <a
-            href="#categories"
-            onClick={(e) => { e.preventDefault(); onNavigate('categories'); }}
-            className="hover:text-[#C45B72] transition-colors py-1"
-          >
-            Services &amp; Categories
-          </a>
-
           <a
             href="#shop"
             onClick={(e) => { e.preventDefault(); onNavigate('shop'); }}
             className="hover:text-[#C45B72] transition-colors py-1"
           >
-            Shop Essentials
+            Shop
           </a>
-
+          <a
+            href="#categories"
+            onClick={(e) => { e.preventDefault(); onNavigate('categories'); }}
+            className="hover:text-[#C45B72] transition-colors py-1"
+          >
+            Categories
+          </a>
+          <a
+            href="#about"
+            onClick={(e) => { e.preventDefault(); onNavigate('about'); }}
+            className="hover:text-[#C45B72] transition-colors py-1"
+          >
+            About
+          </a>
           <a
             href="#location"
             onClick={(e) => { e.preventDefault(); onNavigate('location'); }}
             className="hover:text-[#C45B72] transition-colors py-1 flex items-center gap-1"
           >
             <MapPin className="w-3.5 h-3.5 text-[#C45B72]" />
-            <span>Studio Location</span>
+            <span>Store Locator</span>
           </a>
-
           <a
             href="#contact"
             onClick={(e) => { e.preventDefault(); onNavigate('contact'); }}
@@ -139,11 +131,11 @@ export default function Navbar({
         </nav>
 
         {/* Action Icons */}
-        <div className="flex items-center space-x-2.5 sm:space-x-3.5">
+        <div className="flex items-center space-x-3 sm:space-x-4">
           <button
             onClick={onOpenSearch}
             className="p-2 text-gray-700 hover:text-[#C45B72] hover:bg-pink-50 rounded-full transition-colors relative"
-            title="Search products & styles"
+            title="Search products"
           >
             <Search className="w-5 h-5" />
           </button>
@@ -161,26 +153,13 @@ export default function Navbar({
             )}
           </button>
 
-          <a
-            href={STORE_INFO.instagramUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center gap-1 bg-gradient-to-r from-pink-500 to-rose-500 text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-sm hover:opacity-95 transition-all"
-            title="Follow on Instagram"
+          <button
+            onClick={() => onNavigate('contact')}
+            className="p-2 text-gray-700 hover:text-[#C45B72] hover:bg-pink-50 rounded-full transition-colors hidden sm:block"
+            title="My Account"
           >
-            <span>Instagram ↗</span>
-          </a>
-
-          <a
-            href={STORE_INFO.googleMapsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden md:inline-flex items-center gap-1 bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-sm transition-all"
-            title="Open Google Maps Location"
-          >
-            <MapPin className="w-3.5 h-3.5" />
-            <span>Maps</span>
-          </a>
+            <User className="w-5 h-5" />
+          </button>
 
           {/* Cart Button */}
           <button
@@ -217,41 +196,39 @@ export default function Navbar({
             Home
           </a>
           <a
-            href="#bridal-portfolio"
-            onClick={() => { setMobileMenuOpen(false); onNavigate('bridal-portfolio'); }}
-            className="block py-2 text-base font-semibold text-[#C45B72] border-b border-pink-50"
+            href="#shop"
+            onClick={() => { setMobileMenuOpen(false); onNavigate('shop'); }}
+            className="block py-2 text-base font-medium text-gray-800 hover:text-[#C45B72] border-b border-pink-50"
           >
-            👑 Bridal Portfolio (Real Clients)
-          </a>
-          <a
-            href={STORE_INFO.instagramUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block py-2 text-base font-semibold text-pink-600 border-b border-pink-50"
-          >
-            📸 Instagram (@llll_rakhi_llll) ↗
-          </a>
-          <a
-            href={STORE_INFO.googleMapsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block py-2 text-base font-semibold text-emerald-600 border-b border-pink-50"
-          >
-            📍 Google Maps Studio Location ↗
+            Shop All
           </a>
           <a
             href="#categories"
             onClick={() => { setMobileMenuOpen(false); onNavigate('categories'); }}
             className="block py-2 text-base font-medium text-gray-800 hover:text-[#C45B72] border-b border-pink-50"
           >
-            Services &amp; Categories
+            Categories
           </a>
           <a
-            href="#shop"
-            onClick={() => { setMobileMenuOpen(false); onNavigate('shop'); }}
+            href="#about"
+            onClick={() => { setMobileMenuOpen(false); onNavigate('about'); }}
             className="block py-2 text-base font-medium text-gray-800 hover:text-[#C45B72] border-b border-pink-50"
           >
-            Shop Essentials
+            About Us
+          </a>
+          <a
+            href="#location"
+            onClick={() => { setMobileMenuOpen(false); onNavigate('location'); }}
+            className="block py-2 text-base font-medium text-gray-800 hover:text-[#C45B72] border-b border-pink-50"
+          >
+            Store Locator &amp; Map
+          </a>
+          <a
+            href="#contact"
+            onClick={() => { setMobileMenuOpen(false); onNavigate('contact'); }}
+            className="block py-2 text-base font-medium text-gray-800 hover:text-[#C45B72]"
+          >
+            Contact
           </a>
         </div>
       )}

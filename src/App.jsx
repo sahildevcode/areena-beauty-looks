@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import Loader from './components/Loader';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import BridalPortfolio from './components/BridalPortfolio';
-import AwardBanner from './components/AwardBanner';
 import CategoriesSection from './components/CategoriesSection';
 import BestSellers from './components/BestSellers';
 import SpecialOfferBanner from './components/SpecialOfferBanner';
@@ -157,14 +155,6 @@ export default function App() {
         onShopNow={() => handleNavigate('shop')}
         onExploreCategory={(cat) => handleSelectCategory(cat)}
       />
-
-      {/* Real Bridal Transformations Portfolio */}
-      <BridalPortfolio
-        onBookLook={() => handleNavigate('location')}
-      />
-
-      {/* Excellence Awards 2024 Accolade Banner */}
-      <AwardBanner />
 
       {/* Shop by Category Section */}
       <CategoriesSection
