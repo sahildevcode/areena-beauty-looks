@@ -135,7 +135,7 @@ export default function StoreLocation() {
             <div className="my-auto py-6 flex flex-col sm:flex-row items-center gap-6 justify-center">
               <div className="relative group shrink-0">
                 <img
-                  src="/images/areena-royal-bridal-sq.jpg"
+                  src="./images/areena-royal-bridal-sq.jpg"
                   alt="Areena Bridal Real Transformation"
                   className="w-28 h-28 sm:w-36 sm:h-36 object-cover rounded-2xl shadow-lg border-2 border-white"
                 />

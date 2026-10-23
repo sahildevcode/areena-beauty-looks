@@ -2,7 +2,7 @@ export const CATEGORIES = [
   {
     id: 'makeup',
     name: 'Makeup & Bridal',
-    image: '/images/areena-bridal-glam-sq.jpg',
+    image: './images/areena-bridal-glam-sq.jpg',
     count: '24+ Looks',
     tagline: 'Glow from within',
     description: 'Signature HD bridal glam, reception looks, and luxury palettes.'
@@ -10,7 +10,7 @@ export const CATEGORIES = [
   {
     id: 'skincare',
     name: 'Skincare',
-    image: '/images/cat-skincare.jpg',
+    image: './images/cat-skincare.jpg',
     count: '18+ Treatments',
     tagline: 'Dewy & Pure',
     description: 'Pre-bridal facials, hydrating serums, and radiant glass skin.'
@@ -18,7 +18,7 @@ export const CATEGORIES = [
   {
     id: 'nails',
     name: 'Nails & Extensions',
-    image: '/images/cat-nails.jpg',
+    image: './images/cat-nails.jpg',
     count: '32+ Styles',
     tagline: 'Salon finish at home',
     description: 'Aesthetic press-on nail sets, bows, gems, and acrylic extensions.'
@@ -26,7 +26,7 @@ export const CATEGORIES = [
   {
     id: 'hair',
     name: 'Hair Styling & Accessories',
-    image: '/images/cat-hair.jpg',
+    image: './images/cat-hair.jpg',
     count: '28+ Styles',
     tagline: 'Effortlessly chic',
     description: 'Bridal floral buns, Korean style clips, and textured curls.'
@@ -34,7 +34,7 @@ export const CATEGORIES = [
   {
     id: 'jewelry',
     name: 'Bridal Jewelry',
-    image: '/images/areena-royal-bridal-sq.jpg',
+    image: './images/areena-royal-bridal-sq.jpg',
     count: '19+ Sets',
     tagline: 'Royal heritage',
     description: 'Kundan naths, royal chokers, maang tikka, and pearl haars.'
@@ -42,7 +42,7 @@ export const CATEGORIES = [
   {
     id: 'accessories',
     name: 'Beauty Essentials',
-    image: '/images/cat-accessories.jpg',
+    image: './images/cat-accessories.jpg',
     count: '15+ Items',
     tagline: 'Everyday must-haves',
     description: 'Ultra-soft blending sponges, cosmetic pouches, and vanity kits.'
@@ -54,7 +54,7 @@ export const BRIDAL_PORTFOLIO = [
     id: 'look-1',
     title: 'Signature HD Bridal Glam',
     subtitle: 'Nath, Maang Tikka & Glass Skin Glow',
-    image: '/images/areena-bridal-glam.jpg',
+    image: './images/areena-bridal-glam.jpg',
     category: 'Bridal Makeover',
     tag: 'Most Requested',
     features: ['Waterproof 24-hr Airbrush finish', 'Precision Winged Eyeliner', 'Soft Rose Blush & Hydrated Lips', 'Floral Hair Adornment']
@@ -63,7 +63,7 @@ export const BRIDAL_PORTFOLIO = [
     id: 'look-2',
     title: 'Royal Heritage Velvet Bridal',
     subtitle: 'Classic Maroon & Gold Embroidery',
-    image: '/images/areena-royal-bridal.jpg',
+    image: './images/areena-royal-bridal.jpg',
     category: 'Traditional Bridal',
     tag: 'Heritage Luxe',
     features: ['Royal Matha Patti & Double Dupatta Draping', 'Heavy Kundan & Pearl Haar Setting', 'Smokey Kohl Eye Definition', 'Long-lasting Flawless Base']
@@ -72,7 +72,7 @@ export const BRIDAL_PORTFOLIO = [
     id: 'look-3',
     title: 'Champagne Gold Reception Glam',
     subtitle: 'Sparkling Cocktail & Sangeet Look',
-    image: '/images/areena-reception-gold.jpg',
+    image: './images/areena-reception-gold.jpg',
     category: 'Reception & Party',
     tag: 'Trending 2026',
     features: ['Dewy Luminous Shimmer Base', 'Layered Diamond-style Choker Matching', 'Soft Glam Beach Waves / Sleek Hair', 'Feather & Tassel Outfit Complement']
@@ -87,7 +87,7 @@ export const PRODUCTS = [
     price: 8.99,
     originalPrice: 11.25,
     discount: '-20%',
-    image: '/images/prod-nails.jpg',
+    image: './images/prod-nails.jpg',
     rating: 4.9,
     reviews: 142,
     badge: 'Best Seller',
@@ -102,7 +102,7 @@ export const PRODUCTS = [
     price: 6.99,
     originalPrice: 8.25,
     discount: '-15%',
-    image: '/images/prod-clips.jpg',
+    image: './images/prod-clips.jpg',
     rating: 4.8,
     reviews: 98,
     badge: 'Trending',
@@ -117,7 +117,7 @@ export const PRODUCTS = [
     price: 12.99,
     originalPrice: 15.85,
     discount: '-18%',
-    image: '/images/prod-gloss.jpg',
+    image: './images/prod-gloss.jpg',
     rating: 5.0,
     reviews: 230,
     badge: 'Popular',
@@ -132,7 +132,7 @@ export const PRODUCTS = [
     price: 5.99,
     originalPrice: 6.80,
     discount: '-12%',
-    image: '/images/prod-sponge.jpg',
+    image: './images/prod-sponge.jpg',
     rating: 4.9,
     reviews: 84,
     badge: 'Essential',
@@ -147,7 +147,7 @@ export const PRODUCTS = [
     price: 14.50,
     originalPrice: 18.00,
     discount: '-19%',
-    image: '/images/cat-skincare.jpg',
+    image: './images/cat-skincare.jpg',
     rating: 4.9,
     reviews: 67,
     badge: 'New',
@@ -162,7 +162,7 @@ export const PRODUCTS = [
     price: 13.99,
     originalPrice: 17.50,
     discount: '-20%',
-    image: '/images/cat-jewelry.jpg',
+    image: './images/cat-jewelry.jpg',
     rating: 4.8,
     reviews: 115,
     badge: 'Hot',

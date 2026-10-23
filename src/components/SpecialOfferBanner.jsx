@@ -32,7 +32,7 @@ export default function SpecialOfferBanner({ onCopyPromo }) {
             <div className="md:col-span-4 flex justify-center md:justify-start">
               <div className="relative group overflow-hidden rounded-2xl shadow-md border border-white/60 bg-white/40 p-1">
                 <img
-                  src="/images/banner-gift.jpg"
+                  src="./images/banner-gift.jpg"
                   alt="Special Beauty Offer Gift Box"
                   className="w-full max-w-[260px] h-[160px] object-cover rounded-xl transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"

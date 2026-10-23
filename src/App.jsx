@@ -27,7 +27,7 @@ export default function App() {
       category: 'nails',
       price: 8.99,
       originalPrice: 11.25,
-      image: '/images/prod-nails.jpg',
+      image: './images/prod-nails.jpg',
       quantity: 1
     }
   ]);
