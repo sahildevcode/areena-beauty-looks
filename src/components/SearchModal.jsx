@@ -88,7 +88,7 @@ export default function SearchModal({
                       {product.name}
                     </h4>
                     <span className="text-xs font-bold text-[#C45B72]">
-                      ${product.price.toFixed(2)}
+                      ₹{product.price}
                     </span>
                   </div>
                 </div>

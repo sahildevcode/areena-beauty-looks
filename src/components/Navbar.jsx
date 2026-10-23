@@ -20,7 +20,7 @@ export default function Navbar({
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1.5 text-center">
           <div className="hidden md:flex items-center gap-1.5 font-medium tracking-wide">
             <Truck className="w-3.5 h-3.5" />
-            <span>Bridal Appointments &amp; Express Shipping Worldwide</span>
+            <span>Free Express Delivery on Orders Over ₹999 • All Over India</span>
           </div>
 
           <div

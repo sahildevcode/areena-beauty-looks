@@ -25,12 +25,12 @@ export default function CartDrawer({
   if (appliedPromo === 'WELCOME10') discountRate = 0.10;
   if (appliedPromo === 'SPECIAL15') discountRate = 0.15;
 
-  const discountAmount = rawSubtotal * discountRate;
+  const discountAmount = Math.round(rawSubtotal * discountRate);
   const subtotalAfterDiscount = rawSubtotal - discountAmount;
-  const freeShippingThreshold = 50;
+  const freeShippingThreshold = 999;
   const freeShippingDifference = freeShippingThreshold - subtotalAfterDiscount;
   const isFreeShipping = freeShippingDifference <= 0;
-  const shippingFee = (rawSubtotal > 0 && !isFreeShipping) ? 4.99 : 0;
+  const shippingFee = (rawSubtotal > 0 && !isFreeShipping) ? 99 : 0;
   const total = rawSubtotal > 0 ? (subtotalAfterDiscount + shippingFee) : 0;
 
   const handleApplyPromoCode = (e) => {
@@ -102,12 +102,12 @@ export default function CartDrawer({
               {isFreeShipping ? (
                 <div className="flex items-center gap-1.5 text-emerald-700 font-medium">
                   <Sparkles className="w-4 h-4 text-emerald-600" />
-                  <span>Yay! You've unlocked <strong>FREE Standard Shipping</strong>!</span>
+                  <span>Yay! You've unlocked <strong>FREE Express Delivery</strong>!</span>
                 </div>
               ) : (
                 <div>
                   <p className="text-gray-700 font-medium">
-                    Add <strong className="text-[#C45B72]">${freeShippingDifference.toFixed(2)}</strong> more to get <strong>FREE Shipping</strong>!
+                    Add <strong className="text-[#C45B72]">₹{freeShippingDifference}</strong> more to get <strong>FREE Express Delivery</strong>!
                   </p>
                   <div className="w-full bg-pink-200/60 rounded-full h-1.5 mt-2 overflow-hidden">
                     <div
@@ -129,7 +129,7 @@ export default function CartDrawer({
                 </div>
                 <h3 className="text-xl font-serif font-semibold text-gray-900">Order Placed!</h3>
                 <p className="text-sm text-gray-600 max-w-xs mx-auto">
-                  Thank you! Your GlowNest beauty box is being prepared with love and sparkles.
+                  Thank you! Your Areena beauty package is being prepared with love and care.
                 </p>
               </div>
             ) : cart.length === 0 ? (
@@ -139,7 +139,7 @@ export default function CartDrawer({
                 </div>
                 <h3 className="text-lg font-serif font-semibold text-gray-800">Your bag is empty</h3>
                 <p className="text-xs text-gray-500 max-w-xs mx-auto">
-                  Looks like you haven't added anything yet. Explore our best sellers and cute accessories!
+                  Explore our viral nails, hair accessories, and luxury bridal essentials!
                 </p>
                 <button
                   onClick={onClose}
@@ -176,7 +176,7 @@ export default function CartDrawer({
                         </button>
                       </div>
                       <span className="text-xs text-[#C45B72] font-bold mt-0.5 block">
-                        ${item.price.toFixed(2)}
+                        ₹{item.price}
                       </span>
                     </div>
 
@@ -201,7 +201,7 @@ export default function CartDrawer({
                       </div>
 
                       <span className="text-xs font-bold text-gray-900">
-                        ${(item.price * item.quantity).toFixed(2)}
+                        ₹{item.price * item.quantity}
                       </span>
                     </div>
                   </div>
@@ -241,24 +241,24 @@ export default function CartDrawer({
               <div className="space-y-1.5 text-xs text-gray-600 pt-2 border-t border-pink-100/60">
                 <div className="flex justify-between">
                   <span>Subtotal</span>
-                  <span className="font-medium text-gray-900">${rawSubtotal.toFixed(2)}</span>
+                  <span className="font-medium text-gray-900">₹{rawSubtotal}</span>
                 </div>
 
                 {discountRate > 0 && (
                   <div className="flex justify-between text-[#C45B72] font-medium">
                     <span>Discount ({appliedPromo} - {discountRate * 100}%)</span>
-                    <span>-${discountAmount.toFixed(2)}</span>
+                    <span>-₹{discountAmount}</span>
                   </div>
                 )}
 
                 <div className="flex justify-between">
-                  <span>Standard Shipping</span>
-                  <span>{shippingFee === 0 ? <strong className="text-emerald-600">FREE</strong> : `$${shippingFee.toFixed(2)}`}</span>
+                  <span>Express Delivery</span>
+                  <span>{shippingFee === 0 ? <strong className="text-emerald-600">FREE</strong> : `₹${shippingFee}`}</span>
                 </div>
 
                 <div className="flex justify-between text-base font-bold text-gray-900 pt-2 border-t border-pink-200">
                   <span>Total</span>
-                  <span className="text-[#C45B72]">${total.toFixed(2)}</span>
+                  <span className="text-[#C45B72]">₹{total}</span>
                 </div>
               </div>
 
@@ -272,7 +272,7 @@ export default function CartDrawer({
               </button>
 
               <p className="text-[10px] text-center text-gray-400">
-                🔒 Safe &amp; Secure 256-bit Encrypted Checkout
+                🔒 Safe &amp; Secure UPI, Card &amp; NetBanking Checkout
               </p>
             </div>
           )}

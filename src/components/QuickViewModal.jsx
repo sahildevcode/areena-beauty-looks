@@ -91,11 +91,11 @@ export default function QuickViewModal({
 
               <div className="flex items-baseline gap-2 pt-1">
                 <span className="text-2xl font-bold text-[#C45B72]">
-                  ${product.price.toFixed(2)}
+                  ₹{product.price}
                 </span>
                 {product.originalPrice && (
                   <span className="text-sm text-gray-400 line-through">
-                    ${product.originalPrice.toFixed(2)}
+                    ₹{product.originalPrice}
                   </span>
                 )}
               </div>
@@ -154,7 +154,7 @@ export default function QuickViewModal({
                   ) : (
                     <>
                       <ShoppingBag className="w-4 h-4" />
-                      <span>Add to Bag • ${(product.price * quantity).toFixed(2)}</span>
+                      <span>Add to Bag • ₹{product.price * quantity}</span>
                     </>
                   )}
                 </button>
@@ -163,11 +163,11 @@ export default function QuickViewModal({
               <div className="grid grid-cols-2 gap-2 text-[11px] text-gray-500 pt-2 border-t border-pink-100">
                 <div className="flex items-center gap-1.5">
                   <Truck className="w-3.5 h-3.5 text-[#C45B72]" />
-                  <span>Ships in 24 hours</span>
+                  <span>Dispatched in 24 hours</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <RefreshCw className="w-3.5 h-3.5 text-[#C45B72]" />
-                  <span>30-Day Easy Returns</span>
+                  <span>Easy Exchange &amp; Support</span>
                 </div>
               </div>
             </div>

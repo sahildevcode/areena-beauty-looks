@@ -26,9 +26,9 @@ export default function App() {
       id: 'nails-bow-heart',
       name: 'Cute Bow & Heart Press On Nails (24Pcs)',
       category: 'nails',
-      price: 8.99,
-      originalPrice: 11.25,
-      image: getImageUrl('images/prod-nails.jpg'),
+      price: 499,
+      originalPrice: 799,
+      image: getImageUrl('images/prod-nails-hd.jpg?v=2'),
       quantity: 1
     }
   ]);

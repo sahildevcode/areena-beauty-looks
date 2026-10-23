@@ -39,7 +39,7 @@ export default function BestSellers({
     <section id="shop" className="py-14 sm:py-20 bg-[#FFF9FA] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header matching image */}
+        {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
           <div>
             <span className="font-script text-2xl text-[#C45B72] tracking-wide block">
@@ -124,7 +124,7 @@ export default function BestSellers({
                     />
                   </button>
 
-                  {/* Quick View Button (appears on hover) */}
+                  {/* Quick View Button */}
                   <button
                     onClick={() => onQuickView(product)}
                     className="absolute bottom-3 left-1/2 -translate-x-1/2 z-10 bg-white/95 text-gray-700 text-xs font-medium px-3.5 py-1.5 rounded-full shadow-md flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 hover:text-[#C45B72] hover:bg-pink-50"
@@ -164,20 +164,20 @@ export default function BestSellers({
                       {product.name}
                     </h3>
 
-                    {/* Price matching reference image */}
+                    {/* Price in Rupees ₹ */}
                     <div className="mt-2 flex items-baseline gap-2">
                       <span className="text-base font-bold text-[#C45B72]">
-                        ${product.price.toFixed(2)}
+                        ₹{product.price}
                       </span>
                       {product.originalPrice && (
                         <span className="text-xs text-gray-400 line-through">
-                          ${product.originalPrice.toFixed(2)}
+                          ₹{product.originalPrice}
                         </span>
                       )}
                     </div>
                   </div>
 
-                  {/* Add to Cart Button matching image */}
+                  {/* Add to Cart Button */}
                   <div className="mt-4 pt-2">
                     <button
                       onClick={() => handleAdd(product)}
