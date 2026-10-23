@@ -1,8 +1,9 @@
-import React from 'react';
-import { ArrowRight, Truck, ShieldCheck, Heart, Sparkles, Star } from 'lucide-react';
+import React, { useState } from 'react';
+import { ArrowRight, Truck, ShieldCheck, Heart, Sparkles, Star, Camera } from 'lucide-react';
 import { getImageUrl } from '../utils/asset';
 
 export default function Hero({ onShopNow, onExploreCategory }) {
+  const [heroMode, setHeroMode] = useState('signature'); // 'signature' | 'pinterest'
   return (
     <section id="home" className="relative overflow-hidden pt-6 pb-14 md:py-16 bg-[#FFF9FA]">
       {/* Background soft glowing blur spheres */}
@@ -93,12 +94,39 @@ export default function Hero({ onShopNow, onExploreCategory }) {
               <div className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-tr from-pink-100 via-rose-50 to-pink-200 p-2 shadow-2xl shadow-rose-200/50 group">
                 <div className="overflow-hidden rounded-[2.2rem] bg-white relative">
                   <img
-                    src={getImageUrl('images/hero-model.jpg')}
+                    src={getImageUrl(heroMode === 'signature' ? 'images/client-glam-hero.jpg' : 'images/hero-model.jpg')}
                     alt="GlowNest Beauty & Style"
                     className="w-full h-[470px] object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   />
                   {/* Subtle gradient vignette */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-pink-900/20 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-pink-900/25 via-transparent to-transparent pointer-events-none" />
+
+                  {/* Switcher Pill inside Image at bottom */}
+                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-md px-2 py-1 rounded-full border border-pink-200 shadow-md flex items-center gap-1 text-[11px] font-semibold text-gray-700 z-20">
+                    <button
+                      type="button"
+                      onClick={() => setHeroMode('signature')}
+                      className={`px-2.5 py-1 rounded-full transition-all flex items-center gap-1 ${
+                        heroMode === 'signature'
+                          ? 'bg-[#C45B72] text-white shadow-sm'
+                          : 'text-gray-600 hover:text-[#C45B72]'
+                      }`}
+                    >
+                      <Sparkles className="w-3 h-3" />
+                      <span>Studio Glam</span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setHeroMode('pinterest')}
+                      className={`px-2.5 py-1 rounded-full transition-all flex items-center gap-1 ${
+                        heroMode === 'pinterest'
+                          ? 'bg-[#C45B72] text-white shadow-sm'
+                          : 'text-gray-600 hover:text-[#C45B72]'
+                      }`}
+                    >
+                      <span>Editorial</span>
+                    </button>
+                  </div>
                 </div>
               </div>
 

@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import CategoriesSection from './components/CategoriesSection';
 import BestSellers from './components/BestSellers';
+import ClientStyleGallery from './components/ClientStyleGallery';
 import SpecialOfferBanner from './components/SpecialOfferBanner';
 import StoreLocation from './components/StoreLocation';
 import CustomerReviews from './components/CustomerReviews';
@@ -172,6 +173,9 @@ export default function App() {
         selectedCategory={selectedCategory}
         onClearCategory={() => setSelectedCategory('all')}
       />
+
+      {/* Real Client Style & Glam Looks Gallery */}
+      <ClientStyleGallery />
 
       {/* Special Offer Promotional Banner */}
       <SpecialOfferBanner onCopyPromo={handleCopyPromo} />

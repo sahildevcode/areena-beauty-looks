@@ -135,8 +135,8 @@ export default function StoreLocation() {
             <div className="my-auto py-6 flex flex-col sm:flex-row items-center gap-6 justify-center">
               <div className="relative group shrink-0">
                 <img
-                  src={getImageUrl('images/hero-model.jpg')}
-                  alt="GlowNest Store Experience"
+                  src={getImageUrl('images/client-royal-look-sq.jpg')}
+                  alt="GlowNest Real Client Review"
                   className="w-28 h-28 sm:w-36 sm:h-36 object-cover object-top rounded-2xl shadow-lg border-2 border-white"
                 />
                 <div className="absolute -bottom-2 -right-2 bg-white rounded-full p-1 shadow-md">
