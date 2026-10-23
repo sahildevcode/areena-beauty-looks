@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <base href="/areena-beauty-looks/" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23C45B72'><path d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arina Beauty Looks — Beauty • Style • You | Look Good ♡ Feel Better</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN for instant styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              blush: {
+                50: '#fff5f7',
+                100: '#ffe8ee',
+                200: '#ffd0dc',
+                300: '#faa6ba',
+                400: '#f47092',
+                500: '#e54770',
+                600: '#c45b72',
+                700: '#a3334c',
+                800: '#872b40',
+                900: '#4a1b24',
+              },
+              rosewood: '#44222a',
+              softcream: '#fffbfa',
+              mauve: '#b56d7e',
+              warmgray: '#fbf7f6'
+            },
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+              serif: ['"Playfair Display"', '"Cormorant Garamond"', 'serif'],
+              script: ['"Caveat"', 'cursive'],
+            },
+            animation: {
+              'pulse-subtle': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'float': 'float 4s ease-in-out infinite',
+              'float-reverse': 'floatReverse 5s ease-in-out infinite',
+              'sparkle': 'sparkle 1.8s ease-in-out infinite',
+              'shimmer': 'shimmer 2.2s infinite linear',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0px)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              floatReverse: {
+                '0%, 100%': { transform: 'translateY(0px)' },
+                '50%': { transform: 'translateY(10px)' },
+              },
+              sparkle: {
+                '0%, 100%': { opacity: 0.3, transform: 'scale(0.8)' },
+                '50%': { opacity: 1, transform: 'scale(1.2)' },
+              },
+              shimmer: {
+                '0%': { backgroundPosition: '-200% 0' },
+                '100%': { backgroundPosition: '200% 0' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #fff5f7;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #f47092;
+        border-radius: 9999px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #c45b72;
+      }
+      .font-script {
+        font-family: 'Caveat', cursive;
+      }
+      .font-serif-luxury {
+        font-family: 'Playfair Display', serif;
+      }
+    </style>
+    <script type="module" crossorigin src="/areena-beauty-looks/assets/index-bx6Ddu1L.js"></script>
+  </head>
+  <body class="bg-[#FFF8F9] text-gray-800 antialiased selection:bg-pink-200 selection:text-pink-900 overflow-x-hidden">
+    <div id="root"></div>
+  </body>
+</html>
